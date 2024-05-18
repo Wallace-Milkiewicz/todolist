@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+     
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #361ee2, #4e085f);
+    padding: 10px;
+}
+
+.todo-app{
+    
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    
+    display: flex;
+    align-items: center;
+    color: #002765;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    
+    width: auto;
+    margin-left: 10px;
+}
+
+.data{
+    display: flex;
+    max-width: 540px;
+    margin:  auto ;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    font-style: italic;
+    color: #ff5945;
+
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+
+button {
+    border: none;
+    outline: none;
+    background-color: #ff5945; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 16px 50px; /* Espaçamento interno */
+    font-size: 16px;
+    border-radius: 40px; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+}
+
+/* Efeito de hover (quando o cursor está sobre o botão) */
+button:hover {
+    background-color: #fd341d; /* Altera a cor de fundo */
+}
+ 
+ul li{
+
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+ul li::before{
+
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.check{
+
+    color: #757575;
+    text-decoration:line-through ;
+}
+
+ul li.check::before{
+    background-image: url(check.png);
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    }
+
+ul li span:hover{
+    background: #edeef0;
+}
